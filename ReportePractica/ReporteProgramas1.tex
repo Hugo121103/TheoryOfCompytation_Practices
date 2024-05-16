@@ -1,0 +1,56 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{eso-pic}
+
+% Definir los márgenes de la página
+\geometry{
+  a4paper,
+  total={170mm,257mm},
+  left=30mm,  % Ajustar si se desea más espacio para el borde lateral
+  right=20mm,
+  top=20mm,
+  bottom=20mm
+}
+
+% Definir el color del borde
+\definecolor{linecolor}{RGB}{156,0,6}  % Ajustar al color deseado
+
+
+\begin{document}
+
+
+% El resto del documento sigue aquí.
+\thispagestyle{empty}
+  \AddToShipoutPicture*{\BackgroundPic}
+  \noindent
+  \begin{tikzpicture}[remember picture, overlay]
+    % Dibujar la línea vertical lateral
+    \draw[line width=4pt, linecolor] (0,-1) -- (0,\paperheight);
+  \end{tikzpicture}
+  \begin{minipage}[b]{.15\textwidth}
+    \includegraphics[width=\textwidth]{logoIPN.png}
+  \end{minipage}%
+  \begin{minipage}[b]{.7\textwidth}
+    \centering
+    \large \textbf{INSTITUTO POLITÉCNICO NACIONAL} \\[0.2cm]
+    \rule{\textwidth}{1.5pt} \\[0.2cm]
+    Escuela superior de Computo \\[5cm]
+    Profesor \\[0.5cm]
+    Materia \\[0.5cm]
+    Título \\[0.5cm]
+    Fecha \\[3cm]
+    Por: \\
+    Domínguez Beltrán Hugo
+  \end{minipage}%
+  \begin{minipage}[b]{.15\textwidth}
+    \includegraphics[width=\textwidth]{logoESCOM.png}
+  \end{minipage}%
+  \vfill
+  \clearpage
+\end{document}

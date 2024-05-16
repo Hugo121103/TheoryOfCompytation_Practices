@@ -1,0 +1,72 @@
+\begin{tikzpicture}
+[->,>=stealth,shorten >=1pt,auto,node distance=2.8cm,semithick]
+\tikzstyle{every state}=[fill=red,draw=none,text=white]
+
+\node[state] (0) {0};
+\node[state] (1) {1};
+\node[state] (2) {2};
+\node[state] (3) {3};
+\node[state] (4) {4};
+\node[state] (5) {5};
+\node[state] (6) {6};
+\node[state] (7) {7};
+\node[state] (8) {8};
+\node[state] (9) {9};
+\node[state] (A) {A};
+\node[state] (B) {B};
+\node[state] (C) {C};
+\node[state] (D) {D};
+\node[state] (E) {E};
+\node[state] (F) {F};
+\path (0) edge (1);
+\path (0) edge (4);
+\path (1) edge (0);
+\path (1) edge (2);
+\path (1) edge (5);
+\path (2) edge (1);
+\path (2) edge (6);
+\path (2) edge (3);
+\path (3) edge (2);
+\path (3) edge (7);
+\path (4) edge (0);
+\path (4) edge (5);
+\path (4) edge (8);
+\path (5) edge (1);
+\path (5) edge (4);
+\path (5) edge (6);
+\path (5) edge (9);
+\path (6) edge (2);
+\path (6) edge (5);
+\path (6) edge (7);
+\path (6) edge (A);
+\path (7) edge (3);
+\path (7) edge (6);
+\path (7) edge (B);
+\path (8) edge (4);
+\path (8) edge (9);
+\path (8) edge (C);
+\path (9) edge (5);
+\path (9) edge (8);
+\path (9) edge (A);
+\path (9) edge (D);
+\path (A) edge (6);
+\path (A) edge (9);
+\path (A) edge (B);
+\path (A) edge (E);
+\path (B) edge (7);
+\path (B) edge (A);
+\path (B) edge (F);
+\path (C) edge (8);
+\path (C) edge (D);
+\path (D) edge (9);
+\path (D) edge (C);
+\path (D) edge (E);
+\path (E) edge (A);
+\path (E) edge (D);
+\path (E) edge (F);
+\path (F) edge (B);
+\path (F) edge (E);
+\end{tikzpicture}
+
+\end{document}
+
